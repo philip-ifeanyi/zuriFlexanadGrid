@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 0%);
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  margin-bottom: 1rem;
+}
+
+a:hover {
+  color: hsl(31, 77%, 52%);
+}
+
+.nav {
+  color: #000;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.grid-box {
+  display: grid;
+  width: 60%;
+  height: 60%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.item {
+  padding: 5rem;
+  text-align: center;
+}
+
+.box-1 {
+  background-color: teal;
+  grid-column: 1 /span 2;
+}
+
+.box-2 {
+  background-color: cyan;
+}
+
+.box-3 {
+  background-color: orange;
+  grid-row: 2 /span 2;
+}
+
+.box-4, .box-5 {
+  background-color: skyblue;
+  grid-column: 2 /span 2;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-box {
+    display: grid;
+    margin: auto;
+    width: 70%;
+    height: 60%;
+    grid-template-columns: repeat(1, 100%);
+    grid-gap: 1rem;
+  }
+
+  .box-1 {
+    grid-column: 1;
+  }
+  
+  .box-3 {
+    grid-row: 3;
+  }
+  
+  .box-4 {
+    grid-column: 1;
+  }
+  .box-5 {
+    grid-column: 1;
+  }
+}
